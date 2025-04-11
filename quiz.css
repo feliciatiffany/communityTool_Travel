@@ -1,0 +1,28 @@
+.container {
+    max-width: 500px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #ffff;
+    
+    text-align: left;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  button {
+    margin-top: 1rem;
+    padding: 8px 20px;
+    font-size: 1rem;
+    background-color: #00bcd4;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #008ba3;
+  }
+  

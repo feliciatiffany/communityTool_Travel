@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel Documents Checklist</title>
+  <link rel="stylesheet" href="quiz.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📝 Document Checklist</h1>
+    <p>Be sure to prepare the following important documents:</p>
+
+    <form id="docForm">
+      <label>
+        <input type="checkbox" name="passport" />
+        Passport / ID
+      </label><br/>
+
+      <label>
+        <input type="checkbox" name="tickets" />
+        Travel tickets (plane, train, etc.)
+      </label><br/>
+
+      <label>
+        <input type="checkbox" name="boarding" />
+        Boarding passes (printed or digital)
+      </label><br/><br/>
+
+      <button type="submit">Save Checklist</button>
+    </form>
+
+    <p id="statusMsg" style="margin-top: 1rem;"></p>
+  </div>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
