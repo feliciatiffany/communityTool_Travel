@@ -41,6 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   
+// RESTART
+localStorage.removeItem('checklistData');
+  localStorage.removeItem('checklistStatus');
+  
 
+  console.log("🧼 Checklist progress reset!");
+  
 
 });

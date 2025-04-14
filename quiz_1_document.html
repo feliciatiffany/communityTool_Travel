@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel Documents Checklist</title>
+  <link rel="stylesheet" href="quiz.css" />
+</head>
+<body>
+
+  <div class="card-wrapper" id="cardFlash"></div>
+  <div class="container">
+    <!-- FOR INCOMPLETE AND COMPLETE -->
+    <div id="statusGrid" class="status-grid">
+      
+      <div id="incompleteStatus" class="status-column left">
+        <div class="status-label" id="incompleteLabel"></div>
+        <div class="status-badges" id="incompleteBadges"></div>
+      </div>
+      <div class="instructionStatus" id="instruction">You can always come back to update your checklist.</div>
+      
+      <div id="completeStatus" class="status-column right">
+        <div class="status-label" id="completeLabel"></div>
+        <div class="status-badges" id="completeBadges"></div>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <h1>📝 Document Checklist</h1>
+    <p>Be sure to prepare the following important documents:</p>
+
+    <form id="checklistForm" data-category="document" data-next="quiz_2_electronic.html">
+      <div id="checkStyle">
+      <label>
+        <input type="checkbox" name="passport" />
+        Passport / ID
+      </label><br/>
+
+      <label>
+        <input type="checkbox" name="tickets" />
+        Travel tickets (plane, train, etc.)
+      </label><br/>
+
+      <label>
+        <input type="checkbox" name="boarding" />
+        Boarding passes (printed or digital)
+      </label><br/><br/>
+    </div>
+      <button type="submit">Save Checklist</button>
+    </form>
+   
+    <p id="statusMsg" style="margin-top: 1rem;"></p>
+  </div>
+
+
+
+  <!-- MUSIC -->
+ 
+
+  <div id="playMusic" class="mini-player">
+    <div class="player-controls">
+      <div class="track-info">
+        <span class="music-emoji">🎵</span>
+        <span id="trackLabel">nothing is playing</span>
+      </div class="circle-btn" >
+      <button id="toggleMusicTab" >▶</button>
+    </div>
+  </div>
+  
+  <script src="quiz.js"></script>
+</body>
+</html>

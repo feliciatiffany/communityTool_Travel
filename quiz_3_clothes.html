@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel Documents Checklist</title>
+  <link rel="stylesheet" href="quiz_3_clothes.css" />
+</head>
+<body>
+
+  <div class="card-wrapper" id="cardFlash"></div>
+  <div class="container">
+    <!-- FOR INCOMPLETE AND COMPLETE -->
+    <div id="statusGrid" class="status-grid">
+      
+      <div id="incompleteStatus" class="status-column left">
+        <div class="status-label" id="incompleteLabel"></div>
+        <div class="status-badges" id="incompleteBadges"></div>
+      </div>
+      <div class="instructionStatus" id="instruction">You can always come back to update your checklist.</div>
+      
+      <div id="completeStatus" class="status-column right">
+        <div class="status-label" id="completeLabel"></div>
+        <div class="status-badges" id="completeBadges"></div>
+      </div>
+    </div>
+
+  
+
+    <h1>👕👗👠 Clothes </h1>
+    <p>Stay slay wherever you are!</p>
+
+    <form id="checklistForm" data-category="clothes" data-next="quiz_4_toiletries.html">
+      <div id="checkStyle">
+      <label>
+        <label>
+          <input type="checkbox" name="tops" />
+          Tops
+        </label><br/>
+        
+        <label>
+          <input type="checkbox" name="bottom" />
+          Bottom
+        </label><br/>
+        
+        <label>
+          <input type="checkbox" name="underwear" />
+          Underwear
+        </label><br/>
+        
+        <label>
+          <input type="checkbox" name="formalwear" />
+          Formal Wear
+        </label><br/>
+        
+        <label>
+          <input type="checkbox" name="sleepwear" />
+          Sleepwear
+        </label><br/>
+        
+        <label>
+          <input type="checkbox" name="outer" />
+          Outer
+        </label><br/>
+        
+        <label>
+          <input type="checkbox" name="activewear" />
+          Activewear
+        </label><br/>
+        
+        <label>
+          <input type="checkbox" name="footwear" />
+          Shoes/Sandals
+        </label><br/>
+        
+        <label>
+          <input type="checkbox" name="accessories" />
+          Accessories
+        </label><br/><br/>
+        
+      
+    <button type="submit">Save Checklist</button>
+    </form>
+   
+    <p id="statusMsg" style="margin-top: 1rem;"></p>
+  </div>
+
+
+
+  <!-- MUSIC -->
+ 
+
+  <div id="playMusic" class="mini-player">
+    <div class="player-controls">
+      <div class="track-info">
+        <span class="music-emoji">🎵</span>
+        <span id="trackLabel">nothing is playing</span>
+      </div class="circle-btn" >
+      <button id="toggleMusicTab" >▶</button>
+    </div>
+  </div>
+  
+  <script src="quiz.js"></script>
+</body>
+</html>

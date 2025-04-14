@@ -1,0 +1,226 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Space Mono', monospace;
+  color: #ffffff;
+  background-color: #EACE84;
+  transform: translateX(-100%);
+  animation: slideIn 0.8s ease-in-out forwards;
+  overflow-x: hidden;
+  
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+  }
+}
+ /* Flashcard wrapper */
+ .card-wrapper {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100vw;
+  height: 100vh;
+  color: #8EAE96;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  transition: left 0.8s ease-in-out;
+}
+
+/* When active, slide the flashcard in */
+.card-wrapper.slide-in {
+  left: 0;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color:#FAD994 ;
+  text-align: center;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #EACE84;
+  border-radius: 6px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  vertical-align: middle;
+  margin-right: 10px;
+  text-align: left;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #EACE84 ;
+  border-color: #EACE84 ;
+}
+
+input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+#checkStyle {
+  text-align: left;
+}
+button {
+  margin-top: 1rem;
+  padding: 8px 20px;
+  font-size: 1rem;
+  background-color: #8EAE96;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #EACE84;
+
+}
+
+/* EMOJI INCOMPLETE */
+.status-grid {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: start;
+  gap: 10px;
+  padding: 10px;
+  z-index: 999;
+  pointer-events: none;
+  font-family: 'Space Mono', monospace;
+  color: white;
+}
+
+.instructionStatus {
+text-align: center;
+font-size: 0.8rem;
+color: #fff;
+pointer-events: auto;
+}
+.status-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  pointer-events: auto;
+}
+
+.status-column.right {
+  align-items: flex-end;
+  margin: 0 20px 0 0;
+}
+.status-column.left {
+  align-items: flex-start;
+  margin: 0 0 0 20px;
+  
+}
+.status-label {
+  font-size: 0.8rem;
+  color: #fff;
+  pointer-events: auto;
+}
+
+.status-badge {
+  width: 50px;
+  height: 50px;
+  font-size: 1.4rem;
+  border-radius: 50%;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  pointer-events: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.status-badge:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+
+
+
+
+/* MUSIC */
+/* 🎧 Mini Music Player Styling */
+
+.mini-player {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border-radius: 15px;
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  z-index: 1000;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+  font-family: 'Space Mono', monospace;
+  
+}
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px; 
+}
+
+.track-info {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+
+#toggleMusicTab {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: #8EAE96;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#toggleMusicTab:hover {
+  background-color: #8EAE96;
+  transform: scale(0.9);
+}

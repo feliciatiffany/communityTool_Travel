@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel Documents Checklist</title>
+  <link rel="stylesheet" href="quiz_4_toiletries.css" />
+</head>
+<body>
+
+  <div class="card-wrapper" id="cardFlash"></div>
+  <div class="container">
+    <!-- FOR INCOMPLETE AND COMPLETE -->
+    <div id="statusGrid" class="status-grid">
+      
+      <div id="incompleteStatus" class="status-column left">
+        <div class="status-label" id="incompleteLabel"></div>
+        <div class="status-badges" id="incompleteBadges"></div>
+      </div>
+      <div class="instructionStatus" id="instruction">You can always come back to update your checklist.</div>
+      
+      <div id="completeStatus" class="status-column right">
+        <div class="status-label" id="completeLabel"></div>
+        <div class="status-badges" id="completeBadges"></div>
+      </div>
+    </div>
+
+  
+
+    <h1>🪥🧼🫧 Toiletries </h1>
+    <p>Skincare, haircare, self-care~ Fresh day~</p>
+
+    <form id="checklistForm" data-category="toiletries" data-next="quiz_5_health.html">
+      <div id="checkStyle">
+        <label>
+          <input type="checkbox" name="toothbrush_toothpaste" />
+          Toothbrush + toothpaste
+        </label><br/>
+        
+        <label>
+          <input type="checkbox" name="skincare" />
+          Skincare
+        </label><br/>
+        
+        <label>
+          <input type="checkbox" name="shampoo_conditioner" />
+          Shampoo + conditioner
+        </label><br/>
+        
+        <label>
+          <input type="checkbox" name="body_wash" />
+          Body wash / soap
+        </label><br/>
+        
+        <label>
+          <input type="checkbox" name="hairbrush_comb" />
+          Hairbrush / comb
+        </label><br/>
+        
+        <label>
+          <input type="checkbox" name="feminine_hygiene" />
+          Feminine hygiene products
+        </label><br/>
+        
+        <label>
+          <input type="checkbox" name="makeup" />
+          Makeup
+        </label><br/>
+        
+        <label>
+          <input type="checkbox" name="hand_sanitizer" />
+          Hand sanitizer
+        </label><br/><br/>
+        
+      </div>
+      
+    <button type="submit">Save Checklist</button>
+    </form>
+   
+    <p id="statusMsg" style="margin-top: 1rem;"></p>
+  </div>
+
+
+
+  <!-- MUSIC -->
+ 
+
+  <div id="playMusic" class="mini-player">
+    <div class="player-controls">
+      <div class="track-info">
+        <span class="music-emoji">🎵</span>
+        <span id="trackLabel">nothing is playing</span>
+      </div class="circle-btn" >
+      <button id="toggleMusicTab" >▶</button>
+    </div>
+  </div>
+  
+  <script src="quiz.js"></script>
+</body>
+</html>
