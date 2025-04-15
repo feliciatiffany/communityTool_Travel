@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Space Mono', monospace;
+    margin: 0;
+    padding: 0;
+    color: #222;
+    background: linear-gradient(
+      135deg,
+      #F7A97B,  /* document */
+      #FAD994,  /* electronics */
+      #B5D2C0,  /* clothes */
+      #B6D2D6,  /* toiletries */
+      #CBBCCF,  /* health */
+      #F2C6C7   /* other */
+    );
+    background-size: 600% 600%;
+    animation: rainbowFlow 20s ease infinite;
+    overflow-x: hidden;
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+  }
+  
+  @keyframes rainbowFlow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+ 
+  /* Flashcard wrapper */
+  .card-wrapper {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transition: left 0.8s ease-in-out;
+  }
+  
+  /* When active, slide the flashcard in */
+  .card-wrapper.slide-in {
+    left: 0;
+  }
+  
+  /* Content */
+  .container {
+    max-width: 600px;
+    text-align: center;
+    padding: 2rem;
+    color: #ffff;
+  }
+  
+ 
+  
+  .emoji {
+    font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+    font-size: 2rem;
+  }
+  
+  
+  /* ========== LAYOUT ========== */
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    height: 100vh;
+    text-align: center;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  
+  /* ========== TEXT ========== */
+  .typing {
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #222;
+    animation:
+        typing 3s steps(30, end) forwards, 
+        blink 0.75s step-end infinite;
+    display: inline-block;
+    max-width: max-content;
+    font-size: 2rem;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    margin-bottom: 1rem;
+    
+    line-height: 1.2;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    margin: 0 0 2rem;
+  }
+  
+
+  /* ========== BUTTON ========== */
+  
+  button {
+    padding: 12px 16px;
+    font-size: 1.4rem;
+    border: none;
+    background-color: transparent;
+    color: #ffff;
+    border-radius: 8px;
+    font-family: 'Space Mono', monospace;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  button:hover {
+    transform: translateY(-6px);
+  }

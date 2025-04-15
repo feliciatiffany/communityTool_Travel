@@ -7,7 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
    
 
     const checklistData = JSON.parse(localStorage.getItem('checklistData')) || {};
-    const statusSummary = {};
+    // const statusSummary = {};
+    const statusSummary = JSON.parse(localStorage.getItem('checklistStatus')) || {};
+
+    
 
     const defaultCategories = ['document', 'electronics', 'clothes', 'toiletries', 'health', 'other'];
     defaultCategories.forEach(cat => {
@@ -177,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // DEBUG
     function debugChecklistStatus() {
     const checklist = JSON.parse(localStorage.getItem('checklistData')) || {};
-    const statusSummary = JSON.parse(localStorage.getItem('checklistStatus')) || {};
+    Object.assign(statusSummary, JSON.parse(localStorage.getItem('checklistStatus')) || {});
   
     console.group('🛠️ Checklist Debug');
   
@@ -258,10 +261,39 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, 1000);
 
+
+  // for emoji nature, city, urban
+  const destination = localStorage.getItem('destinationType');
+  const layer = document.getElementById('animationLayer');
+
+  const emojiFloat = {
+    nature: ['🍃', '🌿', '🍂','🏄🏻‍♀️','🏔️'],
+    city: ['💡', '🚕', '🏙️','🪩'],
+    rural: ['🌾', '🧺', '🐄','🌅']
+  };
+
+  const classMap = {
+    nature: 'leaf',
+    city: 'light',
+    rural: 'cloud'
+  };
+
+  if (destination && emojiFloat[destination]) {
+    for (let i = 0; i < 30; i++) {
+      const emoji = document.createElement('div');
+      emoji.classList.add(classMap[destination]);
+      emoji.textContent = emojiFloat[destination][Math.floor(Math.random() * emojiFloat[destination].length)];
       
-      
+      emoji.style.left = `${Math.random() * 100}%`;
+      emoji.style.fontSize = `${1 + Math.random() * 2}rem`;
+      emoji.style.animationDuration = `${4 + Math.random() * 4}s`;
 
-
-
+      layer.appendChild(emoji);
+    }
+  }
   });
+
+      
+
+
   
